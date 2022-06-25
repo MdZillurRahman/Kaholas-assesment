@@ -41,7 +41,7 @@ const Section = () => {
             <div className="bg-white-500">
               <img className="min-h-full rounded-tr-lg" src={images?.image2} alt="" />
             </div>
-            <div className="bg-red-800">
+            <div>
               <img className="min-h-full" src={images?.image3} alt="" />
             </div>
           </div>
