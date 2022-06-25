@@ -7,13 +7,12 @@ const Section = () => {
 
   useEffect(() => {
     fetch("./images.json")
-      .then((res) => res.json())
+      .then(res => res.json())
       .then((data) => {
         console.log(data);
-        setImages(data)
+        setImages(data);
       });
   }, []);
-
 
   return (
     <div className="mx-8">
@@ -32,15 +31,15 @@ const Section = () => {
           <Text></Text>
         </div>
         <div className="grid grid-cols-3 gap-2">
-          <div className="bg-red-500 rounded-tl-lg">
-            <p>Image-1</p>
+          <div className="bg-red-500 rounded-tl-lg object-cover">
+            <img className="" src={images[0].image1} alt="" />
           </div>
           <div className="grid gap-2">
             <div className="bg-red-300 rounded-tr-lg">
-              <p>Image-2</p>
+            <img src={images[0].image2} alt="" />
             </div>
             <div className="bg-red-800">
-              <p>Image-3</p>
+            <img src={images[0].image3} alt="" />
             </div>
           </div>
         </div>
