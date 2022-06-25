@@ -8,7 +8,7 @@ const Text = ({ images }) => {
       <p>
         In this 5 day class we will explore artists Monet, Matisse, Van Gogh,
         among others and then recreate paintings using crayon and watercolor.
-        Students will have fun learning about the artists & creating their own
+        Students will have fun learning about the artists {"&"} creating their own
         art inspired by their work.
       </p>
       <div className="flex items-center ">

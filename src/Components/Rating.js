@@ -5,7 +5,7 @@ const Rating = () => {
   return (
     <div>
       <div className="flex justify-content-center align-center my-4">
-        <div className="flex text-2xl text-orange-400">
+        <div className="flex text-2xl text-orange-300">
           <AiFillStar />
           <AiFillStar />
           <AiFillStar />
@@ -19,7 +19,7 @@ const Rating = () => {
         </div>
       </div>
       <div className="flex justify-content-center align-center my-4">
-        <div className="flex text-2xl text-orange-400">
+        <div className="flex text-2xl text-orange-300">
           <AiFillStar />
           <AiFillStar />
           <AiFillStar />
