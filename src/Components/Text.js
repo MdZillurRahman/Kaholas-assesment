@@ -11,8 +11,8 @@ const Text = ({ images }) => {
         Students will have fun learning about the artists & creating their own
         art inspired by their work.
       </p>
-      <div className="flex justify-content-center align-center">
-        {/* <img className="w-12 m-4" src={images.profile} alt="" /> */}
+      <div className="flex items-center ">
+        <img className="w-8 mr-4 my-4" src={images.profile} alt="" />
         <p>Kimberly R Moseler</p>
       </div>
       <Rating></Rating>
