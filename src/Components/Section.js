@@ -3,15 +3,18 @@ import { AiOutlineQuestionCircle } from "react-icons/ai";
 import Text from "./Text";
 
 const Section = () => {
-  const [images, setImages] = useState();
+  const [images, setImages] = useState("");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    fetch("./images.json")
-      .then(res => res.json())
-      .then((data) => {
-        console.log(data);
-        setImages(data);
-      });
+    async function imageData() {
+      const fetchData = await fetch("./images.json");
+      const res = await fetchData.json();
+      const [data] = res;
+      console.log(data);
+      setImages(data);
+    }
+    imageData();
   }, []);
 
   return (
@@ -31,15 +34,15 @@ const Section = () => {
           <Text></Text>
         </div>
         <div className="grid grid-cols-3 gap-2">
-          <div className="bg-red-500 rounded-tl-lg object-cover">
-            <img className="" src={images[0].image1} alt="" />
+          <div>
+            <img className="min-h-full rounded-tl-lg" src={images?.image1} alt="" />
           </div>
           <div className="grid gap-2">
-            <div className="bg-red-300 rounded-tr-lg">
-            <img src={images[0].image2} alt="" />
+            <div className="bg-white-500">
+              <img className="min-h-full rounded-tr-lg" src={images?.image2} alt="" />
             </div>
             <div className="bg-red-800">
-            <img src={images[0].image3} alt="" />
+              <img className="min-h-full" src={images?.image3} alt="" />
             </div>
           </div>
         </div>
